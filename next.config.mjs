@@ -10,9 +10,10 @@ const nextConfig = {
     unoptimized: true,
   },
   // Mobile-specific optimizations
-  experimental: {
-    optimizeCss: true,
-  },
+  // Remove optimizeCss as it requires critters module
+  // experimental: {
+  //   optimizeCss: true,
+  // },
   // Improve mobile performance
   compress: true,
   poweredByHeader: false,
