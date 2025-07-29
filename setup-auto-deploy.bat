@@ -1,43 +1,47 @@
 @echo off
 echo ========================================
-echo   SETTING UP AUTO-DEPLOYMENT
+echo   SETUP AUTO-DEPLOYMENT
 echo ========================================
 echo.
 
-echo Step 1: Opening GitHub repository settings...
-start https://github.com/felifn/1-1u/settings/hooks
-
+echo Step 1: Getting Vercel Token
 echo.
-echo Step 2: Opening Vercel project settings...
-start https://vercel.com/dashboard
-
-echo.
-echo ========================================
-echo   AUTO-DEPLOYMENT SETUP GUIDE
-echo ========================================
+echo 1. Go to: https://vercel.com/account/tokens
+echo 2. Click "Create Token"
+echo 3. Name it: "Auto Deploy Token"
+echo 4. Copy the token (you'll need it)
 echo.
 
-echo INSTRUCTIONS:
+echo Step 2: Getting Project ID
 echo.
-echo 1. In GitHub (first tab):
-echo    - Look for Vercel webhook
-echo    - If missing, add webhook manually
-echo    - URL: https://vercel.com/api/webhooks/github
+echo 1. Go to: https://vercel.com/dashboard
+echo 2. Click your project: v0-ruined-clothing-website
+echo 3. Click "Settings" tab
+echo 4. Scroll down to "General" section
+echo 5. Copy the "Project ID"
 echo.
-echo 2. In Vercel (second tab):
-echo    - Go to your project settings
-echo    - Find "Git" section
-echo    - Make sure connected to felifn/1-1u
-echo    - Enable "Auto Deploy"
+
+echo Step 3: Getting Org ID
 echo.
-echo 3. Test auto-deployment:
-echo    - Any push to main branch will auto-deploy
-echo    - Check Vercel dashboard for new deployments
+echo 1. In the same Settings page
+echo 2. Look for "Team ID" or "Organization ID"
+echo 3. Copy it (if not found, use your personal account ID)
 echo.
+
+echo Step 4: Adding Secrets to GitHub
+echo.
+echo 1. Go to: https://github.com/felifn/1-1u/settings/secrets/actions
+echo 2. Click "New repository secret"
+echo 3. Add these secrets:
+echo    - Name: VERCEL_TOKEN, Value: [your token from step 1]
+echo    - Name: PROJECT_ID, Value: [your project ID from step 2]
+echo    - Name: ORG_ID, Value: [your org ID from step 3]
+echo.
+
 echo ========================================
-echo   SETUP COMPLETE!
+echo   AUTO-DEPLOYMENT SETUP READY!
 echo ========================================
 echo.
-echo Follow the instructions above to enable auto-deployment.
+echo After adding the secrets, every push will auto-deploy!
 echo.
 pause 
