@@ -8,8 +8,8 @@ import { CartSidebar } from "@/components/cart-sidebar"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "RUINED - Streetwear for the Broken Generation",
-  description: "Embrace the decay with RUINED's collection of streetwear, hoodies, tshirts, and more.",
+  title: "RUINED",
+  description: "Streetwear for the Broken Generation",
   generator: 'v0.dev',
   viewport: {
     width: 'device-width',
@@ -25,6 +25,15 @@ export const metadata: Metadata = {
   },
   formatDetection: {
     telephone: false,
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
   },
 }
 
@@ -42,6 +51,9 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="RUINED" />
         <meta name="format-detection" content="telephone=no" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
       </head>
       <body className={inter.className}>
         <CartProvider>
