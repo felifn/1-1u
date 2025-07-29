@@ -28,14 +28,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg?v=4', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=4', sizes: 'any' },
+      { url: '/favicon.svg?v=5', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=5', sizes: 'any' },
     ],
     apple: [
-      { url: '/favicon.svg?v=4', type: 'image/svg+xml' },
+      { url: '/favicon.svg?v=5', type: 'image/svg+xml' },
     ],
     shortcut: [
-      { url: '/favicon.svg?v=4', type: 'image/svg+xml' },
+      { url: '/favicon.svg?v=5', type: 'image/svg+xml' },
     ],
   },
 }
@@ -56,17 +56,17 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
         
         {/* Favicon links with cache busting */}
-        <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico?v=4" />
-        <link rel="apple-touch-icon" href="/favicon.svg?v=4" />
-        <link rel="shortcut icon" href="/favicon.svg?v=4" />
+        <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico?v=5" />
+        <link rel="apple-touch-icon" href="/favicon.svg?v=5" />
+        <link rel="shortcut icon" href="/favicon.svg?v=5" />
         
         {/* Force cache refresh */}
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
         
-        {/* FORCE DEPLOYMENT - Updated at 2024-12-19 with stronger cache busting */}
+        {/* FINAL FIX - Updated at 2024-12-19 with v=5 cache busting */}
       </head>
       <body className={inter.className}>
         <CartProvider>
