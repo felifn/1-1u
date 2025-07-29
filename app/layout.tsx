@@ -28,11 +28,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg?v=3', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=3', sizes: 'any' },
+      { url: '/favicon.svg?v=4', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=4', sizes: 'any' },
     ],
     apple: [
-      { url: '/favicon.svg?v=3', type: 'image/svg+xml' },
+      { url: '/favicon.svg?v=4', type: 'image/svg+xml' },
+    ],
+    shortcut: [
+      { url: '/favicon.svg?v=4', type: 'image/svg+xml' },
     ],
   },
 }
@@ -51,10 +54,19 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="RUINED" />
         <meta name="format-detection" content="telephone=no" />
-        <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico?v=3" />
-        <link rel="apple-touch-icon" href="/favicon.svg?v=3" />
-        {/* FORCE DEPLOYMENT - Updated at 2024-12-19 */}
+        
+        {/* Favicon links with cache busting */}
+        <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico?v=4" />
+        <link rel="apple-touch-icon" href="/favicon.svg?v=4" />
+        <link rel="shortcut icon" href="/favicon.svg?v=4" />
+        
+        {/* Force cache refresh */}
+        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
+        
+        {/* FORCE DEPLOYMENT - Updated at 2024-12-19 with stronger cache busting */}
       </head>
       <body className={inter.className}>
         <CartProvider>
