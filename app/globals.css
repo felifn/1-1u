@@ -227,7 +227,26 @@
     font-weight: 900;
     font-style: normal;
     text-transform: uppercase;
+    color: #ffffff !important;
   }
+}
+
+/* Force white color for all RUINED logo variants */
+.ruined-logo-gothic,
+.ruined-logo-textured,
+.ruined-logo-cracked,
+.ruined-logo-interactive {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Remove any background gradients that might interfere */
+.ruined-logo-gothic,
+.ruined-logo-textured {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
 }
 
 /* Import Google Fonts as fallback */
