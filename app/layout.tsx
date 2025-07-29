@@ -28,14 +28,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg?v=5', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=5', sizes: 'any' },
+      { url: '/ruined-favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
     ],
     apple: [
-      { url: '/favicon.svg?v=5', type: 'image/svg+xml' },
+      { url: '/ruined-favicon.svg', type: 'image/svg+xml' },
     ],
     shortcut: [
-      { url: '/favicon.svg?v=5', type: 'image/svg+xml' },
+      { url: '/ruined-favicon.svg', type: 'image/svg+xml' },
     ],
   },
 }
@@ -55,18 +55,18 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="RUINED" />
         <meta name="format-detection" content="telephone=no" />
         
-        {/* Favicon links with cache busting */}
-        <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico?v=5" />
-        <link rel="apple-touch-icon" href="/favicon.svg?v=5" />
-        <link rel="shortcut icon" href="/favicon.svg?v=5" />
+        {/* NEW FAVICON - Bypass browser cache */}
+        <link rel="icon" href="/ruined-favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/ruined-favicon.svg" />
+        <link rel="shortcut icon" href="/ruined-favicon.svg" />
         
         {/* Force cache refresh */}
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
         
-        {/* FINAL FIX - Updated at 2024-12-19 with v=5 cache busting */}
+        {/* NEW FAVICON FILE - Bypass browser cache completely */}
       </head>
       <body className={inter.className}>
         <CartProvider>
