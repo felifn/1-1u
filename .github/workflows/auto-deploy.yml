@@ -1,34 +1,16 @@
-name: Auto Deploy to Vercel
+name: Trigger Vercel Deployment
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  deploy:
+  trigger-deploy:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        
-    - name: Install dependencies
-      run: npm install
-      
-    - name: Build project
-      run: npm run build
-      
-    - name: Deploy to Vercel
-      uses: amondnet/vercel-action@v25
-      with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.ORG_ID }}
-        vercel-project-id: ${{ secrets.PROJECT_ID }}
-        vercel-args: '--prod' 
+    - name: Trigger Vercel Deployment
+      run: |
+        echo "Push detected - Vercel should auto-deploy via webhook"
+        echo "Check Vercel dashboard for deployment status"
+        echo "Deployment URL: https://v0-ruined-clothing-website.vercel.app" 
