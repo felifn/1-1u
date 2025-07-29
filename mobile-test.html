@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="RUINED">
+    <meta name="format-detection" content="telephone=no">
+    <title>Mobile Test - RUINED</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .test-item {
+            background: #333;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        
+        .success {
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .warning {
+            border-left: 4px solid #FF9800;
+        }
+        
+        .error {
+            border-left: 4px solid #F44336;
+        }
+        
+        button {
+            background: #666;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            min-height: 44px;
+            min-width: 44px;
+        }
+        
+        button:hover {
+            background: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Mobile Compatibility Test</h1>
+        
+        <div class="test-item success">
+            <h3>✅ Viewport Meta Tag</h3>
+            <p>Proper viewport meta tag is present for mobile rendering.</p>
+        </div>
+        
+        <div class="test-item success">
+            <h3>✅ Touch Targets</h3>
+            <p>Buttons have minimum 44px touch targets for mobile accessibility.</p>
+            <button>Test Button</button>
+        </div>
+        
+        <div class="test-item success">
+            <h3>✅ Mobile Font Rendering</h3>
+            <p>Font smoothing and text size adjustment are configured for mobile.</p>
+        </div>
+        
+        <div class="test-item success">
+            <h3>✅ Theme Color</h3>
+            <p>Theme color is set to black (#000000) for mobile browser UI.</p>
+        </div>
+        
+        <div class="test-item success">
+            <h3>✅ Apple Web App Meta Tags</h3>
+            <p>Apple-specific meta tags are configured for iOS devices.</p>
+        </div>
+        
+        <div class="test-item warning">
+            <h3>⚠️ Next.js Build Required</h3>
+            <p>To see the full mobile fixes, you need to build and run the Next.js application.</p>
+        </div>
+        
+        <div class="test-item">
+            <h3>📱 Mobile Testing Instructions</h3>
+            <ol>
+                <li>Open this page on your mobile device</li>
+                <li>Check that the page loads properly without horizontal scrolling</li>
+                <li>Verify that buttons are easy to tap</li>
+                <li>Test that the page scales correctly on different screen sizes</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        // Test for mobile device
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        
+        if (isMobile()) {
+            console.log('Mobile device detected - mobile optimizations should be active');
+        } else {
+            console.log('Desktop device detected - test on mobile for full verification');
+        }
+    </script>
+</body>
+</html> 
