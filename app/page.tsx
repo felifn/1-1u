@@ -149,6 +149,17 @@ export default function RuinedHomepage() {
 
               {/* Navigation Links */}
               <nav className="space-y-6">
+                {/* Sign in with Shop Button */}
+                <Link
+                  href="https://shop.app/pay/authentication/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold tracking-wider transition-colors py-3 px-4 rounded-lg text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  SIGN IN WITH SHOP
+                </Link>
+                
                 <Link
                   href="/shop-all"
                   className="block text-white text-lg font-semibold tracking-wider hover:text-zinc-300 transition-colors py-3"

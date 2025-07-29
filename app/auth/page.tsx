@@ -156,7 +156,7 @@ export default function AuthPage() {
           <h1 className="text-4xl font-bold text-center tracking-wider">{isSignUp ? "CREATE ACCOUNT" : "LOGIN"}</h1>
 
           {/* Shop Sign In Button */}
-          <Link href="https://shop.app/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://shop.app/pay/authentication/login" target="_blank" rel="noopener noreferrer">
             <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-full text-lg">
               {isSignUp ? "Sign up with shop" : "Sign in with shop"}
             </Button>
