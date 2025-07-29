@@ -51,9 +51,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="RUINED" />
         <meta name="format-detection" content="telephone=no" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico?v=2" />
+        <link rel="apple-touch-icon" href="/favicon.svg?v=2" />
+        {/* CACHE BUST - Force rebuild with gothic favicon */}
       </head>
       <body className={inter.className}>
         <CartProvider>

@@ -31,6 +31,10 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     }
@@ -38,6 +42,11 @@
   "functions": {
     "app/api/**/*.ts": {
       "maxDuration": 10
+    }
+  },
+  "build": {
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1"
     }
   }
 } 
