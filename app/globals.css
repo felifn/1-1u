@@ -231,24 +231,54 @@
   }
 }
 
-/* Force white color for all RUINED logo variants */
+/* Force white color for all RUINED logo variants - ULTRA STRONG */
 .ruined-logo-gothic,
 .ruined-logo-textured,
 .ruined-logo-cracked,
-.ruined-logo-interactive {
+.ruined-logo-interactive,
+h1.ruined-logo-gothic,
+h1.ruined-logo-textured,
+h1.ruined-logo-cracked,
+h1.ruined-logo-interactive,
+h3.ruined-logo-textured {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+  fill: #ffffff !important;
 }
 
 /* Remove any background gradients that might interfere */
 .ruined-logo-gothic,
-.ruined-logo-textured {
+.ruined-logo-textured,
+.ruined-logo-cracked,
+.ruined-logo-interactive,
+h1.ruined-logo-gothic,
+h1.ruined-logo-textured,
+h1.ruined-logo-cracked,
+h1.ruined-logo-interactive,
+h3.ruined-logo-textured {
   background: none !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
+  -webkit-background: none !important;
 }
 
 /* Import Google Fonts as fallback */
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
+/* NUCLEAR OPTION - Override any possible conflicting styles */
+h1.text-4xl.font-bold.tracking-wider.ruined-logo-gothic,
+h1.text-4xl.font-bold.tracking-wider.ruined-logo-textured,
+h1.text-4xl.font-bold.tracking-wider.ruined-logo-cracked,
+h1.text-4xl.font-bold.tracking-wider.ruined-logo-interactive,
+h3.font-bold.text-lg.mb-4.tracking-wider.ruined-logo-textured {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+  fill: #ffffff !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-background: none !important;
+}
